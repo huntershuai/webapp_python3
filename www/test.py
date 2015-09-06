@@ -10,6 +10,7 @@ import orm
 
 @asyncio.coroutine
 def init(loop):
+	
     yield from orm.create_pool(loop=loop, host='10.21.31.9', port=3316, user='root', password='root', db='awesome')
     u=User(name='test',email='test@test.com',password='test', image='about:blank')
     yield from u.save()
