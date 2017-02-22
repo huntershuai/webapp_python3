@@ -120,6 +120,8 @@ class Model(dict, metaclass=ModelMetaclass):
 
 			return value 
 
+
+
 	@classmethod
 	@asyncio.coroutine
 	def find(cls,pk):
